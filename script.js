@@ -9,3 +9,9 @@ $(window).scroll(function () {
     "transform": "translate(" + winScroll / 14 + "%)"
   });
 })
+
+// Navigation hamburger menu on/off
+$(".toggle-button").click(function (event) {
+  $("nav").toggleClass("active");
+  event.preventDefault();
+})

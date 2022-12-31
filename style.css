@@ -1,3 +1,19 @@
+:root {
+  --fs-xl: 4.25rem;
+  --fs-600: 1.65rem;
+  --fs-500: 1.5rem;
+  --fs-400: 1.25rem;
+}
+
+@media (min-width: 420px) {
+  :root {
+    --fs-xl: 5.5rem;
+    --fs-600: 2.2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.5rem;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -8,49 +24,96 @@
   font-family: "Garamond", serif;
 }
 
-::selection {
-  background: #0b7ea8
-}
-
 body {
   background: #171c2a;
-  height: 200vh;
+  min-height: 200vh;
 }
 
 li,
 a,
 header.logo {
   font-weight: 500;
-  font-size: 1.75rem;
+  font-size: var(--fs-500);
   text-decoration: none;
   text-shadow: 0px 0px 1rem #171c2a;
 }
 
 header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 5rem;
+  padding: 1.5em 1.5em;
+  background: #171c2a;
   z-index: 1;
 }
 
+.toggle-button {
+  position: absolute;
+  top: 1.7rem;
+  right: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+}
+
+.toggle-button .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #eDf0f1;
+  border-radius: 10px;
+}
+
 .nav-links {
+  display: flex;
   list-style: none;
 }
 
 .nav-links li {
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0px 20px;
 }
 
-.nav-links li a {
+.nav-links li:hover {
+  background-color: #0d111b;
+}
+
+.nav-links li {
   transition: all 0.3s ease 0s;
 }
 
-.nav-links li a:hover {
-  color: #d4d8d9;
+@media (max-width: 840px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .nav-links {
+    width: 100%;
+    margin-top: 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 10px 20px;
+  }
 }
 
 .container {
@@ -80,28 +143,32 @@ header {
 }
 
 .main-name {
-  font-size: 6.5rem;
+  font-size: var(--fs-xl);
+  line-height: var(--fs-xl);
   font-weight: 600;
   text-decoration: underline;
   text-shadow: 0px 0px 1.5rem #171c2a;
-
 }
 
 .main-desc {
-  margin-top: 1rem;
-  font-size: 2.5rem;
+  cursor: default;
+  margin-top: 1em;
+  font-size: var(--fs-600);
   text-shadow: 0px 0px 1.3rem #171c2a;
 }
 
 .content {
-  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
-  z-index: 2;
-  background: #171c2a;
-  padding: 10% 20%;
-  font-size: 1.5rem;
+  margin-top: 6em;
+  font-size: var(--fs-400);
 }
 
-.content .section-title {
+.content .about {
+  width: min(70%, 55rem);
+  margin-inline: auto
+}
+
+.section-title {
   margin-bottom: 1em;
 }
