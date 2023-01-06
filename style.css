@@ -34,11 +34,6 @@
   /* font-family: 'Cardo', serif; */
 }
 
-article h3,
-article p {
-  color: var(--c-dark1)
-}
-
 body {
   background-color: var(--c-dark1);
   min-height: 200vh;
@@ -76,7 +71,7 @@ header {
 
 .nav-links li {
   /* display: inline-block; */
-  padding: 0 0.83em;
+  padding: 0.15em 0.83em;
 }
 
 .nav-links li:hover {
@@ -241,65 +236,77 @@ header {
 }
 
 .content .about-sec .about-text,
-.content .projects-sec .projects-text {
+.content .projects-sec .projects-text,
+.content .projects-sec .card-grid {
   width: min(70%, 55rem);
   margin-inline: auto;
 }
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 3em 0;
+.card-grid {
+  margin: 3rem 0;
+  display: grid;
+  /* card min size 300px, max size: as large as needed */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .card {
-  background-color: var(--c-light);
-  width: 20em;
-  border-radius: 20px;
-  margin: 0.5em;
+  --padding: 1rem;
+  background-color: var(--c-dark2);
+  /* border: 1px solid #777; */
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.25);
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 
 .card-image {
-  height: 200px;
-  margin-bottom: 15px;
-  background-size: cover;
-  overflow: scroll;
-  border-radius: 20px 20px 0 0;
+  overflow: hidden;
 }
 
-.project-3 {
-  background-image: url("assets/images-projects/social-media-desktop-app-20230101.jpg");
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: var(--padding);
+  padding-bottom: 0;
 }
 
-.project-2 {
-  background-image: url("assets/images-projects/enzyme-kinetics-eg-plot-20230101.jpg");
-}
-
-.project-1 {
-  background-image: url("assets/images-projects/plant-based-diet-kit-20230101.jpg");
-}
-
-.card h3 {
-  padding: 10px;
-}
-
-.card p {
-  padding: 10px;
-  min-height: 25%;
-}
-
-.card a {
-  background-color: var(--c-dark1);
-  color: var(--c-light);
-  padding: 15px 20px;
+.card-image img {
   display: block;
-  text-align: center;
-  margin: 20px 50px;
+  max-height: 200px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  transition: 200ms transform ease-in-out;
 }
 
-.card:hover {
-  background-color: var(--c-light-hover);
-  transform: scale(1.02);
-  transition: all 0.2s ease;
+.card:hover .card-image img {
+  transform: scale(1.025);
+}
+
+.card-body {
+  font-size: 1.25rem;
+  padding: 0 var(--padding);
+}
+
+.card-footer {
+  padding: var(--padding);
+  padding-top: 0;
+}
+
+.card-footer button {
+  margin-top: 1rem;
+  background-color: var(--c-dark1);
+  border: 1px solid var(--c-light);
+  font-size: 1.25rem;
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.card button:hover,
+.card button:focus {
+  background-color: var(--c-dark-hover);
 }
