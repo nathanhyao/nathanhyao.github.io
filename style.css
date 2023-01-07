@@ -9,6 +9,7 @@
   --c-light: #eDf0f1;
   --c-dark1: #171c2a;
   --c-dark2: #131722;
+  --c-dark3: #0e1119;
   --c-dark-hover: #0c101a;
   --c-light-hover: #dbe0e1;
 }
@@ -151,7 +152,7 @@ header {
   background-size: cover;
   position: absolute;
   z-index: -1;
-  filter: brightness(68%);
+  filter: brightness(73%);
   overflow: hidden;
 }
 
@@ -216,7 +217,8 @@ header {
 }
 
 .content .about-sec,
-.content .projects-sec {
+.content .projects-sec,
+.content .art-sec {
   position: relative;
   width: 100%;
   padding-top: 8em;
@@ -237,7 +239,8 @@ header {
 
 .content .about-sec .about-text,
 .content .projects-sec .projects-text,
-.content .projects-sec .card-grid {
+.content .projects-sec .card-grid,
+.content .art-sec .art-text {
   width: min(70%, 55rem);
   margin-inline: auto;
 }
@@ -249,6 +252,12 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: flex-start;
   gap: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 .card {
@@ -309,4 +318,8 @@ header {
 .card button:hover,
 .card button:focus {
   background-color: var(--c-dark-hover);
+}
+
+.content .art-sec {
+  background-color: var(--c-dark3);
 }
