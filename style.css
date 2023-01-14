@@ -6,12 +6,13 @@
   --fs-arrow: 2.2rem;
 
   /* Colors */
-  --c-light: #eDf0f1;
-  --c-dark1: #171c2a;
-  --c-dark2: #131722;
-  --c-dark3: #0e1119;
-  --c-dark-hover: #0c101a;
-  --c-light-hover: #dbe0e1;
+  --c-dark1: hsl(224, 29%, 13%);
+  --c-dark2: hsl(224, 29%, 10%);
+  --c-dark3: hsl(224, 27%, 8%);
+  --c-dark-hover: hsl(223, 37%, 7%);
+
+  --c-light: hsl(195, 12%, 94%);
+  --c-light-hover: hsl(190, 9%, 87%);
 }
 
 @media (min-width: 620px) {
@@ -152,7 +153,7 @@ header {
   background-size: cover;
   position: absolute;
   z-index: -1;
-  filter: brightness(73%);
+  filter: brightness(78%);
   overflow: hidden;
 }
 
@@ -168,16 +169,16 @@ header {
   font-size: var(--fs-xl);
   line-height: 0.9;
   font-weight: 700;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-family: 'Cardo', serif;
-  text-shadow: 0 0 1.5rem var(--c-dark1);
+  text-shadow: 0 0 1.1rem var(--c-dark1);
 }
 
 .main-desc {
   cursor: default;
-  margin-top: 1em;
+  margin-top: 0.8em;
   font-size: var(--fs-600);
-  text-shadow: 0 0 1.3rem var(--c-dark1);
+  text-shadow: 0 0 0.7rem var(--c-dark1);
 }
 
 .scroll-indicator {
@@ -240,7 +241,8 @@ header {
 .content .about-sec .about-text,
 .content .projects-sec .projects-text,
 .content .projects-sec .card-grid,
-.content .art-sec .art-text {
+.content .art-sec .art-text,
+.content .art-sec .art-container {
   width: min(70%, 55rem);
   margin-inline: auto;
 }
@@ -262,10 +264,11 @@ header {
 
 .card {
   --padding: 1rem;
+  --shadow-glow: hsla(0, 0%, 100%, 0.25);
   background-color: var(--c-dark2);
-  /* border: 1px solid #777; */
+  /* border: 1px solid hsl(0, 0%, 47%); */
   border: none;
-  box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px 1px var(--shadow-glow);
   border-radius: 0.25rem;
   overflow: hidden;
 }
@@ -322,4 +325,31 @@ header {
 
 .content .art-sec {
   background-color: var(--c-dark3);
+}
+
+.art-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.art-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.art-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  transition: 200ms transform ease-in-out;
+  border-radius: 0.25rem;
+}
+
+.art-gallery img:hover {
+  transform: scale(1.025);
 }
