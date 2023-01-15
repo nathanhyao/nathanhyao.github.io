@@ -6,9 +6,10 @@
   --fs-arrow: 2.2rem;
 
   /* Colors */
-  --c-dark1: hsl(224, 29%, 13%);
-  --c-dark2: hsl(224, 29%, 10%);
-  --c-dark3: hsl(224, 27%, 8%);
+  --c-dark1: hsl(225, 29%, 11%);
+  --c-dark2: hsl(240, 32%, 8%);
+  --c-dark3: hsl(201, 30%, 9%);
+  --c-dark4: hsl(280, 15%, 8%);
   --c-dark-hover: hsl(223, 37%, 7%);
 
   --c-light: hsl(195, 12%, 94%);
@@ -73,7 +74,7 @@ header {
 
 .nav-links li {
   /* display: inline-block; */
-  padding: 0.15em 0.83em;
+  padding: 0.16em 0.83em 0.07em;
 }
 
 .nav-links li:hover {
@@ -101,7 +102,7 @@ header {
     /* display: none; */
     z-index: 1000;
     position: fixed;
-    inset: 0 0 0 40%;
+    inset: 0 0 0 35%;
     flex-direction: column;
     padding: min(20vh, 10rem) 2em;
     background-color: hsl(0 0% 0% / 0.45);
@@ -217,23 +218,35 @@ header {
   left: 0;
 }
 
+/* background colors of different sections */
+.content .projects-sec {
+  background-color: var(--c-dark2);
+}
+
+.content .art-sec {
+  background-color: var(--c-dark3);
+}
+
+.content .contact-sec {
+  background-color: var(--c-dark4);
+}
+
 .content .about-sec,
 .content .projects-sec,
-.content .art-sec {
+.content .art-sec,
+.content .contact-sec {
   position: relative;
   width: 100%;
   padding-top: 8em;
-  padding-bottom: 14em;
-}
-
-.content .projects-sec {
-  background-color: var(--c-dark2);
+  padding-bottom: 16em;
 }
 
 @media only screen and (min-width: 1670px) {
 
   .content .about-sec,
-  .content .projects-sec {
+  .content .projects-sec,
+  .content .art-sec,
+  .content .contact-sec {
     padding-bottom: 18em;
   }
 }
@@ -242,7 +255,8 @@ header {
 .content .projects-sec .projects-text,
 .content .projects-sec .card-grid,
 .content .art-sec .art-text,
-.content .art-sec .art-container {
+.content .art-sec .art-gallery,
+.content .contact-text {
   width: min(70%, 55rem);
   margin-inline: auto;
 }
@@ -323,33 +337,30 @@ header {
   background-color: var(--c-dark-hover);
 }
 
-.content .art-sec {
-  background-color: var(--c-dark3);
-}
-
-.art-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 3rem 0;
-}
-
 .art-gallery {
   display: grid;
+  align-items: center;
+  margin: 3rem 0;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
 
 .art-gallery img {
-  display: block;
+  /* display: block; */
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
-  transition: 200ms transform ease-in-out;
   border-radius: 0.25rem;
+  transition: 200ms transform ease-in-out;
 }
 
 .art-gallery img:hover {
   transform: scale(1.025);
+}
+
+.art-gallery a {
+  /* border: 1px solid red; */
+  display: inline-block;
+  line-height: 0;
 }
