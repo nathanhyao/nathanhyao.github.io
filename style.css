@@ -10,10 +10,10 @@
   --c-dark2: hsl(240, 32%, 8%);
   --c-dark3: hsl(201, 30%, 9%);
   --c-dark4: hsl(280, 15%, 8%);
-  --c-dark-hover: hsl(223, 37%, 7%);
+  --c-dark-hover: hsl(225, 10%, 2%);
 
-  --c-light: hsl(195, 12%, 94%);
-  --c-light-hover: hsl(190, 9%, 87%);
+  --c-light: hsl(195, 10%, 90%);
+  --c-light-hover: hsl(195, 10%, 80%);
 }
 
 @media (min-width: 620px) {
@@ -322,7 +322,7 @@ header {
   padding-top: 0;
 }
 
-.card-footer button {
+.card-footer a button {
   margin-top: 1rem;
   background-color: var(--c-dark1);
   border: 1px solid var(--c-light);
