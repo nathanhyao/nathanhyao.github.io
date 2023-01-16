@@ -1,1 +1,21 @@
-Hi! My name is Nathan Yao, and I am an undergraduate student in Computer Science at Purdue University.
+Hi! My name is Nathan Yao. I am a junior undergraduate student in Computer Science at Purdue University. I enjoy it because creativity and analysis is necessary to form something beautiful here, like in other fields of art. Please scroll down to see some of my programming projects and paintings.
+
+Here are some recent programming projects that I am proud of. Projects are created in academia and in my free time. To see more please visit my GitHub.
+
+PROJECTS
+
+Lightweight ERP
+A team collaboration app / lightweight enterprise resource planning (ERP) software. Built with Flutter, Flask, SQL Server (Team project for CS307 Software Engineering I)
+
+Shell Interpreter on Linux
+A shell (like bash and csh) featuring builtins, signal handling, zombie process elimination, subshells, environment variable expansion, tilde expansion, wildcarding, edit mode, and command history.
+
+Social Media Desktop App
+An app where users can create, edit, and delete their profiles, posts, and comments. Follows client-server architecture and handles simultaneous users. Simulates real-time updates.
+
+Enzyme Kinetics Calculator
+An algorithm that determines enzyme performance given experiment data. Mathematically models the data using quadratic regression and calculus in MATLAB. Generates graphs and tables.
+
+ART
+
+Aside from computer science, I also like to draw and take pictures. Below are some of my recent digital paintings. Please check out my Instagram for photographs. I will create and upload new artwork in the future.

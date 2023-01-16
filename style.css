@@ -6,14 +6,14 @@
   --fs-arrow: 2.2rem;
 
   /* Colors */
-  --c-dark1: hsl(225, 29%, 11%);
+  --c-dark1: hsl(226, 28%, 12%);
   --c-dark2: hsl(240, 32%, 8%);
-  --c-dark3: hsl(201, 30%, 9%);
+  --c-dark3: hsl(202, 31%, 12%);
   --c-dark4: hsl(280, 15%, 8%);
-  --c-dark-hover: hsl(225, 10%, 2%);
+  --c-dark-hover: hsl(240, 9%, 2%);
 
-  --c-light: hsl(195, 10%, 90%);
-  --c-light-hover: hsl(195, 10%, 80%);
+  --c-light: hsl(192, 10%, 90%);
+  --c-light-hover: hsl(192, 10%, 70%);
 }
 
 @media (min-width: 620px) {
@@ -60,6 +60,7 @@ header {
   align-items: center;
   padding: 0 10em;
   background-color: var(--c-dark1);
+  /* border: 1px solid red; */
   z-index: 1;
 }
 
@@ -148,18 +149,25 @@ header {
 }
 
 .container img {
+  z-index: -2;
   width: 100%;
   height: 100vh;
   object-fit: cover;
   background-size: cover;
   position: absolute;
-  z-index: -1;
+  overflow: visible;
   filter: brightness(78%);
-  overflow: hidden;
+}
+
+.container .background {}
+
+.container .foreground {
+  z-index: 0;
 }
 
 .main-title {
-  position: absolute;
+  z-index: -1;
+  position: fixed;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -45%);
@@ -172,14 +180,14 @@ header {
   font-weight: 700;
   /* text-decoration: underline; */
   font-family: 'Cardo', serif;
-  text-shadow: 0 0 1.1rem var(--c-dark1);
+  text-shadow: 0 0 1.2rem var(--c-dark-hover);
 }
 
 .main-desc {
   cursor: default;
   margin-top: 0.8em;
   font-size: var(--fs-600);
-  text-shadow: 0 0 0.7rem var(--c-dark1);
+  text-shadow: 0 0 0.7rem var(--c-dark-hover);
 }
 
 .scroll-indicator {
@@ -219,6 +227,10 @@ header {
 }
 
 /* background colors of different sections */
+.content .about-sec {
+  background-color: var(--c-dark1);
+}
+
 .content .projects-sec {
   background-color: var(--c-dark2);
 }
@@ -237,8 +249,8 @@ header {
 .content .contact-sec {
   position: relative;
   width: 100%;
-  padding-top: 8em;
-  padding-bottom: 16em;
+  padding-top: 6em;
+  padding-bottom: 12em;
 }
 
 @media only screen and (min-width: 1670px) {
@@ -247,7 +259,7 @@ header {
   .content .projects-sec,
   .content .art-sec,
   .content .contact-sec {
-    padding-bottom: 18em;
+    padding-bottom: 16em;
   }
 }
 
@@ -259,6 +271,22 @@ header {
 .content .contact-text {
   width: min(70%, 55rem);
   margin-inline: auto;
+  line-height: 1.2;
+}
+
+/* Social media icons relevant per section */
+.social {
+  margin-top: 3rem;
+}
+
+.social a {
+  font-size: var(--fs-400);
+  line-height: 1.5;
+  transition: all 0.3s ease 0s;
+}
+
+.social a:hover {
+  color: var(--c-light-hover);
 }
 
 .card-grid {
@@ -343,6 +371,12 @@ header {
   margin: 3rem 0;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .art-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 .art-gallery img {

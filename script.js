@@ -3,10 +3,10 @@ $(window).scroll(function () {
   // console.log(winScroll);
 
   $(".background").css({
-    "transform": "translate(0, " + winScroll / 20 + "%)"
+    "transform": "translate(0, " + winScroll / 14 + "%)"
   });
   $(".birds").css({
-    "transform": "translate(" + winScroll / 14 + "%)"
+    "transform": "translate(" + winScroll / 18 + "%)"
   });
 })
 
