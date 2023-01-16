@@ -1,6 +1,6 @@
 Hi! My name is Nathan Yao. I am a junior undergraduate student in Computer Science at Purdue University. I enjoy it because creativity and analysis is necessary to form something beautiful here, like in other fields of art. Please scroll down to see some of my programming projects and paintings.
 
-Here are some recent programming projects that I am proud of. Projects are created in academia and in my free time. To see more please visit my GitHub.
+Here are some recent programming projects that I've made. Projects are created in academia or during my free time. Please visit my GitHub to see more.
 
 PROJECTS
 
@@ -18,4 +18,4 @@ An algorithm that determines enzyme performance given experiment data. Mathemati
 
 ART
 
-Aside from computer science, I also like to draw and take pictures. Below are some of my recent digital paintings. Please check out my Instagram for photographs. I will create and upload new artwork in the future.
+Aside from computer science, I like to draw and take pictures. Below are some recent digital paintings I've made. Please check my Instagram to see my photography. I will create and upload new artwork in the future.
