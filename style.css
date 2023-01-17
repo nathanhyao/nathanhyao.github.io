@@ -6,6 +6,7 @@
   --fs-arrow: 2.2rem;
 
   /* Colors */
+  --c-dark0: hsl(0, 0%, 8%);
   --c-dark1: hsl(226, 28%, 12%);
   --c-dark2: hsl(240, 32%, 8%);
   --c-dark3: hsl(202, 31%, 12%);
@@ -24,6 +25,10 @@
     --fs-400: 1.5rem;
     --fs-arrow: 3rem;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 *,
@@ -59,9 +64,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 10em;
-  background-color: var(--c-dark1);
+  background-color: var(--c-dark0);
   /* border: 1px solid red; */
-  z-index: 1;
+  z-index: 9999;
 }
 
 .mobile-nav-toggle {
@@ -75,7 +80,11 @@ header {
 
 .nav-links li {
   /* display: inline-block; */
-  padding: 0.16em 0.83em 0.07em;
+  padding: 0.16em 0 0.07em;
+}
+
+.nav-links li a {
+  padding: 0 0.83em 0;
 }
 
 .nav-links li:hover {
@@ -282,6 +291,8 @@ header {
 
 /* Social media icons relevant per section */
 .social {
+  position: relative;
+  z-index: 1;
   margin-top: 3rem;
 }
 
@@ -298,6 +309,7 @@ header {
 .card-grid {
   margin: 3rem 0;
   display: grid;
+  z-index: 1;
   /* card min size 300px, max size: as large as needed */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: flex-start;
@@ -319,6 +331,7 @@ header {
   box-shadow: 0 0 8px 1px var(--shadow-glow);
   border-radius: 0.25rem;
   overflow: hidden;
+  z-index: inherit;
 }
 
 .card-image {
@@ -334,6 +347,7 @@ header {
 
 .card-image img {
   display: block;
+  z-index: 1;
   max-height: 200px;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -373,6 +387,7 @@ header {
 
 .art-gallery {
   display: grid;
+  z-index: 1;
   align-items: center;
   margin: 3rem 0;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -385,6 +400,13 @@ header {
   }
 }
 
+.art-gallery a {
+  border: 2px solid var(--c-light);
+  display: inline-block;
+  line-height: 0;
+  z-index: inherit;
+}
+
 .art-gallery img {
   /* display: block; */
   width: 100%;
@@ -392,15 +414,9 @@ header {
   object-fit: cover;
   object-position: center;
   /* border-radius: 0.25rem; */
-  /* transition: 200ms transform ease-in-out; */
+  transition: 200ms transform ease-in-out;
 }
 
-/* .art-gallery img:hover {
+.art-gallery img:hover {
   transform: scale(1.025);
-} */
-
-.art-gallery a {
-  border: 2px solid #fff;
-  display: inline-block;
-  line-height: 0;
 }
