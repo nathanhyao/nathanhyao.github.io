@@ -17,7 +17,7 @@ Enzyme Kinetics Calculator
 An algorithm that determines enzyme performance by modeling experiment data using quadratic regression and calculus in MATLAB.
 
 Plant-based Macros App
-An informative health app about plant-based substitutes for daily macronutrients (medical innovations course). Android Studio, Java, XML
+An informative health app about plant-based substitutes for daily macronutrients (medical innovations course). Android Studio, Java, XML.
 
 FRC Robotics Team 3104
 Builder and programmer for small rookie FRC team. Java program covers driving and ball-shooting systems for scoring points.
