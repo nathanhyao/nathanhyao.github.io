@@ -1,21 +1,27 @@
-Hi! My name is Nathan Yao. I am a junior undergraduate student in Computer Science at Purdue University. I enjoy it because creativity and analysis is necessary to form something beautiful, like in other fields of art. Please continue scrolling to see some of my work.
+Hi! My name is Nathan Yao. I am a junior undergraduate student in Computer Science at Purdue University. I enjoy CS because creativeness, determination, and scrutiny are needed to form something beautiful, like in other kinds of art. Please scroll down to see some of my work.
 
-Here are some recent programming projects that I've made. Projects are created in academia or during my free time. Please visit my GitHub to see more.
+Recent programming projects. These are created in academia or during my free time. Please visit my GitHub to see more.
 
 PROJECTS
 
 Lightweight ERP
-A team collaboration app / lightweight enterprise resource planning (ERP) software. Built with Flutter, Flask, SQL Server (Team project for CS307 Software Engineering I)
+An enterprise resource planning (ERP) software. Built with Flutter, Flask, SQL Server (CS307 Software Engineering I)
 
 Shell Interpreter on Linux
-A shell (like bash and csh) featuring builtins, signal handling, zombie process elimination, subshells, environment variable expansion, tilde expansion, wildcarding, edit mode, and command history.
+A shell (like bash and csh) featuring builtins, signal handling, subshells, environment variable expansion, wildcarding, etc. C/C++ Lex/Yacc.
 
 Social Media Desktop App
-An app where users can create, edit, and delete their profiles, posts, and comments. Follows client-server architecture and handles simultaneous users. Simulates real-time updates.
+An social app where users can create, edit, and delete their profiles, posts, and comments. Built with Java (w/ Swing).
 
 Enzyme Kinetics Calculator
-An algorithm that determines enzyme performance given experiment data. Mathematically models the data using quadratic regression and calculus in MATLAB. Generates graphs and tables.
+An algorithm that determines enzyme performance by modeling experiment data using quadratic regression and calculus in MATLAB.
+
+Plant-based Macros App
+An informative health app about plant-based substitutes for daily macronutrients (medical innovations course). Android Studio, Java, XML
+
+FRC Robotics Team 3104
+Builder and programmer for small rookie FRC team. Java program covers driving and ball-shooting systems for scoring points.
 
 ART
 
-Aside from computer science, I like to draw and take pictures. Below are some recent digital paintings I've made. Please visit my Instagram to see my photos. I will create and upload new artwork in the future.
+Aside from computer science, I like drawing, painting, and photography. Below are some recent digital paintings I've made, and you can see my photos on Instagram. I'll create and upload new artwork in the future.

@@ -6,12 +6,19 @@
   --fs-arrow: 2.2rem;
 
   /* Colors */
-  --c-dark0: hsl(0, 0%, 8%);
+  /* --c-dark0: hsl(0, 0%, 8%);
   --c-dark1: hsl(226, 28%, 12%);
   --c-dark2: hsl(240, 32%, 8%);
   --c-dark3: hsl(202, 31%, 12%);
-  --c-dark4: hsl(280, 15%, 8%);
-  --c-dark-hover: hsl(240, 9%, 2%);
+  --c-dark4: hsl(280, 15%, 8%); */
+
+  --c-dark0: hsl(0, 0%, 8%);
+  --c-dark1: hsl(0, 0%, 12%);
+  --c-dark2: hsl(0, 0%, 8%);
+  --c-dark3: hsl(0, 0%, 12%);
+  --c-dark4: hsl(0, 0%, 8%);
+
+  --c-dark-hover: hsl(0, 0%, 1%);
 
   --c-light: hsl(192, 10%, 90%);
   --c-light-hover: hsl(192, 10%, 70%);
@@ -50,7 +57,6 @@ body {
 li,
 a,
 header.logo {
-  font-weight: 500;
   font-size: var(--fs-500);
   text-decoration: none;
   text-shadow: 0 0 1rem var(--c-dark1);
@@ -229,6 +235,7 @@ header {
 }
 
 .border-svg {
+  display: none;
   position: absolute;
   width: 100%;
   bottom: -1px;
@@ -259,10 +266,11 @@ header {
   position: relative;
   width: 100%;
   padding-top: 6em;
-  padding-bottom: 12em;
+  /* padding-bottom: 12em; */
+  padding-bottom: 6em;
 }
 
-@media only screen and (min-width: 1670px) {
+/* @media only screen and (min-width: 1670px) {
 
   .content .about-sec,
   .content .projects-sec,
@@ -270,7 +278,7 @@ header {
   .content .contact-sec {
     padding-bottom: 16em;
   }
-}
+} */
 
 .content .about-sec .about-text,
 .content .projects-sec .projects-text,
@@ -278,7 +286,7 @@ header {
 .content .art-sec .art-text,
 .content .art-sec .art-gallery,
 .content .contact-text {
-  width: min(70%, 55rem);
+  width: min(85%, 55rem);
   margin-inline: auto;
   line-height: 1.2;
 }
@@ -339,8 +347,9 @@ header {
 }
 
 .card-title {
+  /* font-family: 'Cardo', serif; */
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   padding: var(--padding);
   padding-bottom: 0;
 }
@@ -371,6 +380,7 @@ header {
 }
 
 .card-footer a button {
+  width: 100%;
   margin-top: 1rem;
   background-color: var(--c-dark1);
   border: 1px solid var(--c-light);
@@ -414,9 +424,9 @@ header {
   object-fit: cover;
   object-position: center;
   /* border-radius: 0.25rem; */
-  transition: 200ms transform ease-in-out;
+  /* transition: 200ms transform ease-in-out; */
 }
 
-.art-gallery img:hover {
+/* .art-gallery img:hover {
   transform: scale(1.025);
-}
+} */
