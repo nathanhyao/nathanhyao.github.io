@@ -24,3 +24,19 @@ $(".mobile-nav-toggle").click(function (event) {
     $(".mobile-nav-toggle").attr("aria-expanded", "false");
   }
 })
+
+// Intersection observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+    else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((elem) => observer.observe(elem));

@@ -1,4 +1,4 @@
-Hi! My name is Nathan Yao. I am a junior undergraduate student in Computer Science at Purdue University. I enjoy CS because creativeness, determination, and scrutiny are needed to form something beautiful, like in other kinds of art. Please scroll down to see some of my work.
+Hi! My name is Nathan Yao. I am a junior undergraduate student in Computer Science at Purdue University. I enjoy CS because creativeness, determination, and scrutiny are needed to form something beautiful, as in other kinds of art. Please scroll down to see some of my work.
 
 Recent programming projects. These are created in academia or during my free time. Please visit my GitHub to see more.
 
