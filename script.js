@@ -1,11 +1,12 @@
+// Parallax effect (JQuery)
 $(window).scroll(function () {
   var winScroll = $(this).scrollTop();
   // console.log(winScroll);
 
-  $(".background").css({
+  $("#background").css({
     "transform": "translate(0, " + winScroll / 14 + "%)"
   });
-  $(".birds").css({
+  $("#birds").css({
     "transform": "translate(" + winScroll / 18 + "%)"
   });
 })
@@ -23,7 +24,7 @@ $(".mobile-nav-toggle").click(function (event) {
     $(".nav-links").attr("data-visible", "false");
     $(".mobile-nav-toggle").attr("aria-expanded", "false");
   }
-})
+});
 
 // Intersection observer
 const observer = new IntersectionObserver((entries) => {
