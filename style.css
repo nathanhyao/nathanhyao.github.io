@@ -13,9 +13,9 @@
   --c-dark4: hsl(280, 15%, 8%); */
 
   --c-dark0: hsl(0, 0%, 8%);
-  --c-dark1: hsl(0, 0%, 13%);
+  --c-dark1: hsl(0, 0%, 11.5%);
   --c-dark2: hsl(0, 0%, 8%);
-  --c-dark3: hsl(0, 0%, 13%);
+  --c-dark3: hsl(0, 0%, 11.5%);
   --c-dark4: hsl(0, 0%, 8%);
   --c-dark-hover: hsl(0, 0%, 1%);
 
@@ -299,6 +299,10 @@ header {
   background-color: var(--c-dark1);
 }
 
+.content .experience-sec {
+  background-color: var(--c-dark2);
+}
+
 .content .projects-sec {
   background-color: var(--c-dark2);
 }
@@ -312,6 +316,7 @@ header {
 }
 
 .content .about-sec,
+.content .experience-sec,
 .content .projects-sec,
 .content .art-sec,
 .content .contact-sec {
@@ -333,6 +338,7 @@ header {
 } */
 
 .content .about-sec .about-text,
+.content .experience-sec .experience-text,
 .content .projects-sec .projects-text,
 .content .projects-sec .card-grid,
 .content .art-sec .art-text,
